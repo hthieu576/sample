@@ -24,4 +24,6 @@ test:
 
 production:
   <<: *default
-  database: sample_account_production
+  database: ENV['DATABASE_URL']
+  username: ENV['DATABASE_USERNAME']
+  password: ENV['DATABASE_PASSWORD']
