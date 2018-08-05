@@ -1,0 +1,10 @@
+html
+  head
+    title Sample Account API
+    javascript:
+      var swaggerSpec = #{@json};
+      console.log(swaggerSpec);
+    = javascript_pack_tag 'api/apidocs'
+    = stylesheet_pack_tag 'api/apidocs'
+  body
+    #swagger-ui

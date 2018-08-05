@@ -1,0 +1,11 @@
+{
+  "name": "sample-account",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "swagger-ui-dist": "^3.17.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
+}
