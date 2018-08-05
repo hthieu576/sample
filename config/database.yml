@@ -5,11 +5,11 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
-  username: root
-  password: 123456
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
 
 development:
   <<: *default
@@ -23,4 +23,7 @@ test:
   database: sample_account_test
 
 production:
-  url: ENV['DATABASE_URL']
+  <<: *default
+  database: sample_account_production
+  username: postgres
+  password: postgres

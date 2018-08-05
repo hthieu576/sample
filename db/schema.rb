@@ -12,14 +12,17 @@
 
 ActiveRecord::Schema.define(version: 2018_08_02_122656) do
 
-  create_table "accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "accounts", force: :cascade do |t|
     t.bigint "user_id"
     t.string "name"
     t.integer "balance"
     t.index ["user_id"], name: "index_accounts_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
   end
 
